@@ -2,7 +2,7 @@
 
 EXPECTED="Hello, Test!"
 
-OUTPUT=$(import sys; sys.path.append('/src');import app; print(app.greet("Test!")))
+OUTPUT=$(node -e "console.log(require('./src/app')('Test'))")
 
 if ["$OUTPUT" == "$EXPECTED"]; then
 
