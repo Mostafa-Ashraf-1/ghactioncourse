@@ -14,5 +14,6 @@ jobs:
 
        with:
          python-version: '3.13'
-    -  run: echo 'ls -la'
-    -  run:  python app.py 
+    -  run: ls -la
+    -  working-directory: ./src
+       run:  python app.py 
